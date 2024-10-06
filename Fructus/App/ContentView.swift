@@ -17,6 +17,7 @@ struct ContentView: View {
                     ForEach(fruits.shuffled()) { fruit in
                         FruitRowView(fruit: fruit)
                             .padding(.vertical, 4)
+                            .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                     }
                 }
                 .navigationTitle("Fruits")
