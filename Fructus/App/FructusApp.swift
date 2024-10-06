@@ -11,12 +11,19 @@ import SwiftUI
 struct FructusApp: App {
     @AppStorage("isOnboarding") var isOnboarding: Bool = true
     
+    @Environment(\.scenePhase) var scenePhase
+    
     var body: some Scene {
         WindowGroup {
             if isOnboarding {
                 OnboardingView()
             } else {
                 ContentView()
+            }
+        }   //: WINDOWGROUP
+        .onChange(of: scenePhase) { _, newPhase in
+            if newPhase == .background {
+                isOnboarding = true
             }
         }
     }
