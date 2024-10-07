@@ -1,0 +1,111 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Content source" : {
+
+    },
+    "English" : {
+
+    },
+    "Fruits" : {
+
+    },
+    "If you wish, you can restart the application by toggle the switch in this box. That way it starts the onboarding process and you will see the welcome screen again." : {
+
+    },
+    "Language" : {
+
+    },
+    "Most fruits are naturally low in fat, sodium, and calories. None have cholesterol. Fruits are sources of many essential nutrients, including potassium, dietary fiber, vitamins, and much more." : {
+
+    },
+    "Nutritional value per 100g" : {
+
+    },
+    "Russian" : {
+
+    },
+    "Select your preferred language using the picker below. The app will automatically switch to the selected language, allowing you to interact with the interface in your desired language." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select your preferred language using the picker below. The app will automatically switch to the selected language, allowing you to interact with the interface in your desired language."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите предпочитаемый язык с помощью переключателя ниже. Приложение автоматически переключится на выбранный язык, позволяя вам взаимодействовать с интерфейсом на нужном вам языке."
+          }
+        }
+      }
+    },
+    "Settings" : {
+
+    },
+    "Start" : {
+
+    },
+    "StringKey" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@VARIABLE@"
+          },
+          "substitutions" : {
+            "VARIABLE" : {
+              "formatSpecifier" : "",
+              "variations" : {
+                "plural" : {
+                  "few" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : ""
+                    }
+                  },
+                  "many" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : ""
+                    }
+                  },
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : ""
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : ""
+                    }
+                  },
+                  "two" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : ""
+                    }
+                  },
+                  "zero" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : ""
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Wikipedia" : {
+
+    }
+  },
+  "version" : "1.0"
+}

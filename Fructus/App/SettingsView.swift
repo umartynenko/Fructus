@@ -11,6 +11,9 @@ struct SettingsView: View {
     // MARK: - PROPERTIES
     @Environment(\.presentationMode) var presentationMode
     
+    @AppStorage("isOnboarding") var isOnboarding: Bool = false
+    @AppStorage("selectedLanguage") var selectedLanguage: String = "en"
+    
     // MARK: - BODY
     var body: some View {
         NavigationStack {
@@ -33,6 +36,46 @@ struct SettingsView: View {
                     } //: GROUPBOX
                     
                     // MARK: - SECTION 2
+                    GroupBox(label: SettingsLabelView(labelText: "Castomization", lableImage: "paintbrush")) {
+                        Divider().padding(.vertical, 4)
+                        
+                        Text("If you wish, you can restart the application by toggle the switch in this box. That way it starts the onboarding process and you will see the welcome screen again.")
+                            .padding(.vertical, 8)
+                            .frame(minHeight: 60)
+                            .layoutPriority(1)
+                            .font(.footnote)
+                            .multilineTextAlignment(.leading)
+                        
+                        Toggle(isOn: $isOnboarding) {
+                            if isOnboarding {
+                                Text("Restarted".uppercased())
+                                    .fontWeight(.bold)
+                                    .foregroundStyle(.green)
+                            } else {
+                                Text("Restart".uppercased())
+                                    .fontWeight(.bold)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                        .padding()
+                        .background(Color(UIColor.tertiarySystemBackground)
+                            .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous)))
+                        
+                        // MARK: - LANGUAGE SELECTION
+                        Divider().padding(.vertical, 4)
+                        
+                        Text("Select your preferred language using the picker below. The app will automatically switch to the selected language, allowing you to interact with the interface in your desired language.")
+                            .padding(.vertical, 8)
+                            .frame(minHeight: 60)
+                            .layoutPriority(1)
+                            .font(.footnote)
+                            .multilineTextAlignment(.leading)
+                        
+                        Picker("Language", selection: $selectedLanguage) {
+                            Text("English").tag("en")
+                            Text("Russian").tag("ru")
+                        }
+                    } //: GROUPBOX
                     
                     // MARK: - SECTION 3
                     GroupBox(label:
@@ -62,6 +105,9 @@ struct SettingsView: View {
         } //: NAVIGATIONVIEW
     }
 }
+
+
+
 
 // MARK: - PREVIEW
 #Preview {
